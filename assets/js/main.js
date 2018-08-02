@@ -3,9 +3,9 @@
     const quantityContainer = document.getElementById('quantity');
     let imageInLocalStorage = JSON.parse(localStorage.getItem("images"));
     if (imageInLocalStorage) {
-        for (var i = 0; i < imageInLocalStorage.length; i += 1) {
-            var img = new Image();
-            var div = document.createElement('div');
+        for (let i = 0; i < imageInLocalStorage.length; i += 1) {
+            let img = new Image();
+            let div = document.createElement('div');
             img.setAttribute('src', imageInLocalStorage[i]);
             div.appendChild(img);
             imagesContainer.appendChild(div);
@@ -34,16 +34,16 @@ function FileUpload(file) {
 
     reader.onprogress = (event) => {
         if (event.lengthComputable) {
-            var percentage = Math.round((event.loaded * 100) / event.total);
+            let percentage = Math.round((event.loaded * 100) / event.total);
             progressBar.style.width = `${percentage}%`;
         }
     };
 
-    reader.onloadend = function (e) {
-        var imagesQuantity = 0;
+    reader.onloadend = (e) => {
+        let imagesQuantity = 0;
         const quantityContainer = document.getElementById('quantity');
         if (!localStorage.getItem("images")) {
-            var images = [];
+            let images = [];
             images.push(reader.result);
             localStorage.setItem("images", JSON.stringify(images));
             imagesQuantity = 1;
@@ -55,9 +55,9 @@ function FileUpload(file) {
             localStorage.setItem("images", JSON.stringify(imageInLocalStorage));
         }
 
-        var imagesContainer = document.getElementById('imagesContainer');
-        var div = document.createElement('div');
-        var img = document.createElement('img');
+        let imagesContainer = document.getElementById('imagesContainer');
+        let div = document.createElement('div');
+        let img = document.createElement('img');
         img.setAttribute('src', reader.result);
         div.appendChild(img);
         imagesContainer.appendChild(div);
