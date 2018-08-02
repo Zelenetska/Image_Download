@@ -1,0 +1,201 @@
+/*----------------------------------------------------------------
+* 1. Element styling and reset of standard browser styles
+------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6, p, span, button, a, input, li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub,
+sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+th, td {
+  border: 0;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+h1 {
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 50px;
+  line-height: 92px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #212121;
+  text-transform: uppercase;
+}
+h4 {
+  color: #212121;
+  font-size: 18px;
+  letter-spacing: .8px;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h6 {
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .8px;
+}
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+input:active,
+input:hover,
+input:focus,
+button:active,
+button:hover,
+button:focus,
+a:active,
+a:hover,
+a:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/*---------------------------------------------------------------
+* 2. Universal Classes
+-----------------------------------------------------------------*/
+.btn {
+  padding: 10px 40px;
+}
+.uploadFileForm input,
+.uploadFileForm select {
+  border-radius: 0;
+}
+.uploadFileForm .form-control {
+  border: 1px solid #ffef0d;
+}
+.uploadFileForm .form-control:focus {
+  -webkit-box-shadow: 0px 1px 10px 2px rgba(255, 239, 13, 0.4);
+  -moz-box-shadow: 0px 1px 10px 2px rgba(255, 239, 13, 0.4);
+  box-shadow: 0px 1px 10px 2px rgba(255, 239, 13, 0.4);
+}
+.uploadFileForm .register-button {
+  background-color: #15c70f;
+  transition: all 0.5s ease-out;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+}
+.uploadFileForm .register-button:hover, .uploadFileForm .register-button:active, .uploadFileForm .register-button:focus {
+  background-color: #42e72b;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.uploadFileForm label {
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+/*---------------------------------------------------------------
+* 3. Home page
+-----------------------------------------------------------------*/
+.hero {
+  background: url("../img/bricks.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .wrapper {
+  background-color: rgba(255, 255, 255, 0.42);
+  padding: 15px;
+}
+.hero h1,
+.hero h4 {
+  text-align: center;
+  color: #000;
+}
+
+.hero #imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero #imagesContainer div {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.register h3 {
+  color: #15c70f;
+  margin-bottom: 25px;
+}
+.register .left,
+.register .right {
+  padding: 80px 20px;
+}
+
+.register .progress-container {
+  height: 5px;
+  width: 100%;
+}
+
+.register .progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #ff205a;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 55px;
+    line-height: 75px;
+  }
+  h2 {
+    font-size: 38px;
+    line-height: 54px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 25px;
+    height: auto;
+  }
+}
+@media (max-width: 460px) {
+  h1 {
+    font-size: 45px;
+    line-height: 65px;
+  }
+}

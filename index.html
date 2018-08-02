@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participants</title>
+    <meta name="viewport" content="width=device-width"/>
+
+    <script src="assets/js/libs/modernizr.js"></script>
+    <link rel="stylesheet" href="assets/css/libs/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-homepage">
+
+<div class="outer-wrapper">
+    <div id="inner-wrapper">
+        <section class="hero container-fluid">
+            <div class="wrapper">
+                <h1>Our images <span id="quantity"></span></h1>
+                <div id="imagesContainer"></div>
+            </div>
+        </section> <!--End of hero section-->
+
+        <section class="register" id="register">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm left">
+                        <h3>Greetings & Welcome!</h3>
+                        <p>With this form you can upload new image to our service</p>
+                    </div>
+                    <div class="col-sm right">
+                        <form class="uploadFileForm" id="uploadFileForm">
+
+                            <div class="form-group">
+                                <input type="file" id="image" >
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary register-button" id="uploadButton">Upload</button>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="progress-container">
+                                    <div class="progress-bar" id="progressBar"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> <!--End of register section-->
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<script src="assets/js/libs/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
